@@ -1,0 +1,16 @@
+# GDB / Debugging artifacts
+.gdb_history
+core
+core.*
+*.core
+
+# Editor / OS artifacts
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+*.log
