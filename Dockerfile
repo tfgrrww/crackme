@@ -7,8 +7,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 RUN useradd -m -u 1000 ctf
 
 WORKDIR /home/ctf
-COPY crackme /home/ctf/crackme
-RUN chmod 755 /home/ctf/crackme && chown root:ctf /home/ctf/crackme
+COPY crackme sha256sum.txt ./
+RUN sha256sum -c sha256sum.txt \
+    && chmod 555 /home/ctf/crackme \
+    && chown root:ctf /home/ctf/crackme /home/ctf/sha256sum.txt
 
 USER ctf
 EXPOSE 1337

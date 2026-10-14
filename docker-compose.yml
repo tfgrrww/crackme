@@ -1,8 +1,11 @@
 services:
   challenge:
+    platform: linux/amd64
     build: .
     ports:
       - "1337:1337"
     restart: unless-stopped
     security_opt:
-      - seccomp:unconfined
+      - no-new-privileges:true
+    cap_drop:
+      - ALL

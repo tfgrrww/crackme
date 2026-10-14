@@ -14,3 +14,17 @@ core.*
 
 # Logs
 *.log
+
+# Local analysis and private challenge-author files
+/analysis/
+/author/
+/__pycache__/
+/solve.py
+/solution.md
+/flag.txt
+/private-config.json
+/analysis-map-private.json
+/private_key*
+/recovered*.txt
+*.pem
+*.key

@@ -1,0 +1,6 @@
+# Only the distributable challenge enters the Docker build context.
+**
+!Dockerfile
+!.dockerignore
+!crackme
+!sha256sum.txt
